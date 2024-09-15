@@ -1,61 +1,67 @@
-body{
+body {
     padding: 0px;
     margin: 0px;
     font-family: "Poppins", system-ui;
 }
 
-.card{
-    /* background-color: aqua; */
-    width: 500px;
-    height: 376px;
+.card {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
 }
-.full-name{
+
+.full-name {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 10px;
 }
-.discription{
+
+.discription {
     font-size: 14px;
     font-weight: 300;
     color: #5C5C5C;
     margin-bottom: 20px;
 }
 
-.location{
+.location {
     color: #329BA9;
     display: flex;
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 20px;
 }
-.icon{
+
+.icon {
     font-size: 18px;
     margin-right: 10px;
 }
 
-.bio{
+.bio {
     font-size: 12px;
     font-weight: 300;
     color: #5C5C5C;
 }
 
-.info{
+.info {
     margin-bottom: 10px;
     color: #5C5C5C;
     font-size: 12px;
 }
-.information{
+
+.information {
     margin-top: 20px;
 }
+
 .links {
     margin-top: 50px;
 }
-.links ul{
+
+.links ul {
     padding: 0px;
     list-style: none;
     display: flex;
@@ -64,9 +70,59 @@ body{
     color: #5C5C5C;
     justify-content: space-evenly;
 }
-.links ul li{
+
+.links ul li {
     cursor: pointer;
 }
-.maright{
+
+.maright {
     margin-right: 10px;
+}
+
+/* Responsive for Tablets */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .card {
+        width: 80%;
+        max-width: 600px;
+        padding: 20px;
+    }
+    .full-name {
+        font-size: 20px;
+    }
+    .discription, .location {
+        font-size: 16px;
+    }
+    .bio, .info {
+        font-size: 14px;
+    }
+    .links ul {
+        font-size: 14px;
+    }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+        max-width: 100%;
+        padding: 20px;
+        top: 40%;
+        transform: translate(-50%, -40%);
+    }
+    .full-name {
+        font-size: 16px;
+    }
+    .discription, .location {
+        font-size: 12px;
+    }
+    .bio, .info {
+        font-size: 10px;
+    }
+    .links ul {
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .links ul li {
+        margin-bottom: 10px;
+    }
 }
